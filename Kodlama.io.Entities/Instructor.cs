@@ -6,9 +6,19 @@ using System.Threading.Tasks;
 
 namespace Kodlama.io.Entities;
 
-public class Instructor
+public class Instructor : Entity
 {
-    public int Id { get; set; }
+    public virtual ICollection<Course> Courses { get; set; }
     public string FirstName { get; set; }
     public string LastName { get; set; }
+    public Instructor()
+    {
+        
+    }
+    public Instructor(int id, string firstName, string lastName) : this()
+    {
+        Id = id;
+        FirstName = firstName;
+        LastName = lastName;
+    }
 }
