@@ -9,7 +9,9 @@ namespace Kodlama.io.Entities;
 public class Course
 {
     public int Id { get; set; }
+    public virtual Category Category { get; set; }
     public int CategoryId { get; set; }
+    public virtual Instructor Instructor { get; set; }
     public int InstructorId { get; set; }
     public string CourseName { get; set; }
     public string CourseDescription { get; set; }
